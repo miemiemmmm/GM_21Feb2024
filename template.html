@@ -44,7 +44,7 @@
   <!-- Welcome page: Set title, seminar info and background image (handled in JavaScript part) -->
   <div class="slides" id="slide_container">
     <section data-state="Title_Page">
-      <div style="position:relative; height:300px; width:100%; top:10%">
+      <div style="position:relative; height:40%; width:100%; top:10%">
         <p class="presentation_title" style="color:#1C226B; -webkit-text-stroke: 1.5px blue;">Benchmarking 3D Shape-Based Recognition for Flexible Building Blocks</p>
       </div>
 
@@ -59,26 +59,25 @@
       Title and abstract
       Benchmarking 3D Shape-Based Recognition for Flexible Building Blocks
       Atoms are in constant motion, and all but the simplest molecules are flexible, thus being justly called deformable or soft objects. With the eventual goal of deciphering the 3D motion of molecules using machine learning (ML), a fundamental problem arises beforehand: how efficiently can a data-driven model abstract the shape heterogeneity of flexible molecular building blocks, which is manifest also in structural databases like the PDB, while correctly recognizing their identities? This core task will inevitably remain a fundamental component of deployed models, much like basic object recognition and tracking are basic components of the automated mining of video data. In molecules, the design of features is a critical step for many tasks from protein design to drug discovery. Naturally, features must carry task-specific information, yet the methods used for composing them and the role of molecular geometry (shape) in these processes are rarely defined explicitly. In this work, we establish a standard workflow to compare different combinations of standard ML models with various molecular representations. We created a benchmark dataset containing substantial heterogeneity for a given label to offer a platform for rigorous performance comparisons. Our findings reveal that, while it is feasible to train general-purpose models, their efficiency and performance ceiling can differ. We also demonstrate that pretrained models are capable of acquiring transferable knowledge by deploying them to data taken from dynamic trajectories.
-
      -->
 
-    <!--Template page-->
-    <!--<section data-state="slide_">-->
-    <!--    <p class="slide-title">This is a Template Slide for Demonstration</p>-->
-    <!--    <div class="slide_content_style1">-->
-    <!--        <p>This is a Template Main Context1</p>-->
-    <!--        <p>This is a Template Main Context2</p>-->
-    <!--        <p>This is a Template Main Context3</p>-->
-    <!--    </div>-->
-    <!--    <p class="reference_style">This is a template reference.</p>-->
-    <!--</section>-->
+    <!-- Template page--> 
+    <!-- <section data-state="slide_">
+      <p class="slide-title">This is a Template Slide for Demonstration</p>
+      <div class="box_style_t20l0h100w50">
+        <p>This is a Template Main Context1</p>
+        <p>This is a Template Main Context2</p>
+        <p>This is a Template Main Context3</p>
+      </div>
+      <p class="reference_style">This is a template reference.</p>
+    </section> -->
 
     <section data-state="slide_OutlinePage">
       <p class="slide-title">Outline</p>
-      <div class="box_style_wt20">
+      <div class="box_style_t20l0h100w100">
         <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 1: Introduction </p>
         <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 2: Three dimensional molecular representations </p>
-        <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 3: FEater for benchmarking the 3D shape perception  </p>
+        <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 3: Benchmarking the 3D shape perception  </p>
         <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 4: Three dimensional dynamic feature and potential application </p>
         <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 5: Future work </p>
       </div>
@@ -96,6 +95,7 @@
         chapter_break_container
     The <img> is automatically set to the default image for chapter break
     -->
+
     <section>
 			<div class="chapter_break_container">
 				<p class="chapter_break">Introduction</p>
@@ -105,19 +105,21 @@
 
     <section>
       <p class="slide-title">3D shape-based training</p>
-      <div class="box_style_mt20">
-        In computer vision field, 3D shape-based training is a fundamental task. The 3D shape-based training can be categorized into several types:
-        <p class="slide_item_style1" style="padding-left: 5%; ">1. Point cloud-based </p>
-        <p class="slide_item_style1" style="padding-left: 5%; ">2. Voxel-based  </p>
-        <p class="slide_item_style1" style="padding-left: 5%; ">3. Surface-based </p>
-        <p class="slide_item_style1" style="padding-left: 5%; ">4. Hilbert curve-based dimension reduction </p>
-        <p class="slide_item_style1" style="padding-left: 5%; ">5. Point 5: Example Item </p>
+      <div class="box_style_t20l0h100w50">
+        <p class="slide_item_style1" style="padding-left: 0 !important; ">In computer vision field, 3D shape-based training is a fundamental task. The 3D shape-based training can be categorized into several types:</p>
+        <p class="slide_item_style1">1. Point cloud-based </p>
+        <p class="slide_item_style1">2. Voxel-based  </p>
+        <p class="slide_item_style1">3. Surface-based </p>
+        <p class="slide_item_style1">4. Hilbert curve-based dimension reduction </p>
+        <p class="slide_item_style1">5. Point 5: Example Item </p>
       </div>
-
-      <div class="image-style1">
-        <img src="welcome.png" style="position: absolute; top:10px; right:-300px; opacity:0.25; transform: rotate(-30deg); height: 700px; width: auto; filter: blur(5px);" >
+      
+      <div class="box_style_t20r75h75w50" >
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/FEater_Toc.png" style="z-index: -1; height:100% !important" >
       </div>
-      <p class="reference_style">This is a template reference.</p>
+      
+      <!-- <img src="welcome.png" class="bgimg_style_rbig" > -->
+      <!-- <p class="reference_style">This is a template reference.</p> -->
     </section>
 
     <section>
@@ -125,8 +127,10 @@
       <div class="box_style_mt20">
         
       </div>
-      <p class="reference_style">This is a template reference.</p>
+      <!-- <p class="reference_style">This is a template reference.</p> -->
     </section>
+
+
 
 
 
@@ -147,38 +151,97 @@
     </section> 
       
 
+    
     <section>
       <p class="slide-title">Feature storage </p>
-      <!-- FEater_Data_structure.png -->
+      <div class="box_style_t20l0h100w50">
+        <!-- <p class="slide_item_style1"> </p> -->
+        <p class="slide_item_style1">The size of 3D voxel data explodes to 800 GB level</p>
+        <p class="slide_item_style1">Feature data I/O from the storage medium is the bottleneck of training</p>
+      </div>
+      <div class="box_style_t25r75w50c" style="text-align: left;">
+        <p class="slide_item_style1">All of combinations are identified </p>
+        <p class="slide_item_style1">Dual-residue population abundancy largely depends on the population of the population of partners </p>
+
+      </div>
+
+      <div class="box_style_t75l50w100c" style="text-align: center !important;"> 
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/Data_structure_Stat.png" style="width: 80%; ">
+        <caption>FEater_Data_structure.png</caption>
+      </div>
     </section>
 
     <section>
       <p class="slide-title">Featurization of single/dual-residues</p>
+
     </section>
 
 
     <section>
 			<div class="chapter_break_container">
-				<p class="chapter_break">FEater for benchmarking the 3D shape perception</p>
+				<p class="chapter_break">Benchmarking the 3D shape perception</p>
 				<img>
 			</div>
 		</section>
 
     <section>
+      <p class="slide-title">FEater dataset</p>
+      <div class="box_style_t20l0h100w50">
+        <p class="slide_item_style1">FEater (<a style="font-weight: bold;">F</a>lexibility and <a style="font-weight: bold;">E</a>lasticity <a style="font-weight: bold;">A</a>ssessment 
+          <a style="font-weight: bold;">T</a>ool for <a style="font-weight: bold;">E</a>ssential <a style="font-weight: bold;">R</a>esidues) can be abbreviated in multiple ways</p>
+      </div>  
+
+      
+        
+      <div class="box_style_t50r75h100c" >
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/FEater_draftlogo.png" style="height: 80% !important; ">
+        <p class="content_subtitle">Drafted logo of FEater; Designed by DALL\(\cdot\)E-3 </p>
+      </div>
+    </section>
+
+    <section>
+      <p class="slide-title">FEater dataset</p>
+      <div class="box_style_t20l0h100w50" style="text-align: center !important;">
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/DataDriven_aligned3DMols.png" style="height: 300px; ">
+      </div>
+
+      <div class="box_style_t20r75w50" style="text-align: center !important;">
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/DataDrivenVisualization.png" style="height: 300px; ">
+      </div>
+
+
+    </section>
+
+
+    <section>
+      <p class="slide-title">Comparison of different feature representations </p>
+
+      <div class="box_style_t20r75w50" style="z-index: -10 !important;">
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/FEater_Comparison_ModelDataCombination.png" style="width: 80% !important; ">
+        <caption></caption>
+      </div>
+    </section>
+
+
+    <section>
       <p class="slide-title">Single residue-based classification </p>
-      <!-- Result_Single_Res.png -->
+      
+      
+      <div class="box_style_t50r75h100c" style="z-index: -10 !important;">
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/Result_Single_Res.png" style="height: 80% !important; ">
+        <caption></caption>
+      </div>
     </section>
     
     <section>
       <p class="slide-title">Dual residue-based classification </p>
-      <!-- Result_Dual_Res.png -->
+      <div class="box_style_t50r75h100c" style="z-index: -10 !important;">
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/Result_Dual_Res.png" style="height: 80% !important; ">
+        <caption></caption>
+      </div>
     </section>
 
-    <section>
-      <p class="slide-title">Comparison of different representations </p>
-
-      <!-- FEater_Comparison_ModelDataCombination.png -->
-    </section>
+    
 
 
     <section>
@@ -189,8 +252,46 @@
 		</section>
 
     <section>
-      <p class="slide-title">Dynamic feature extraction </p>
+      <p class="slide-title">Encoding dynamic features </p>
+      <div class="box_style_t20l0h100w50"> 
+        <p class="slide_item_style1">1. </p>
+      </div>
 
+      <div class="box_style_t20l0h100w50" style="text-align: center !important;">
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/MDFP_scheme.jpeg" style="width: 90% !important; z-index: -10 !important;">
+        <p class="content_subtitle"  style="width: 90% !important; z-index: -10 !important;">MDFP+</p>
+        <p class="slide_item_style1"> </p>
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/PointNet-MD-scheme.jpeg" style="width: 90% !important; z-index: -10 !important;">
+        <div style="text-align: center !important;"><div class="content_subtitle"  style="width: 90% !important; z-index: -10 !important;">PointNet-MD</div></div>
+      </div>
+
+      <div class="box_style_t50r75h100c" style="z-index: -10 !important;">
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/Scheme3ddpds.webp" style="width: 90% !important; ">
+        <caption></caption>
+      </div>
+
+      <p class="reference_style">
+        S. Riniker, Journal of Chemical Information and Modeling, vol. 57, no. 4. American Chemical Society (ACS), pp. 726–741, Apr. 12, 2017. doi: 10.1021/acs.jcim.6b00778.<br>
+        C. Li, B. Gilbert, S. Farrell, and P. Zarzycki, Journal of Chemical Information and Modeling, vol. 63, no. 12. American Chemical Society (ACS), pp. 3742–3750, Jun. 12, 2023. doi: 10.1021/acs.jcim.3c00472.<br>
+        M. Gorostiola González et al., Journal of Cheminformatics, vol. 15, no. 1. Springer Science and Business Media LLC, Aug. 28, 2023. doi: 10.1186/s13321-023-00745-5.<br>
+      </p>
+    </section>
+
+
+    <section>
+      <p class="slide-title">Dynamic feature extraction </p>
+      <div class="box_style_t20l0h100w50"> 
+        <p class="slide_item_style1">1. Grid point \(G_i\) work as observer (GAO) to monitor multiple frames within its eyesight (cutoff) </p>
+        <p class="slide_item_style1">2. Observables are transcripted to a time series for dynamic feature of \(G_i\) </p>
+      </div>
+
+      <!-- 
+        
+       -->
+      <div class="box_style_t50r75w50c" style="z-index: -10 !important;">
+        <img src="https://miemiemmmm.b-cdn.net/CM_Feb2024/Nearl_Dyna_features_Scheme.png" style="width: 95% !important; ">
+        <caption></caption>
+      </div>
     </section>
 
 
@@ -199,7 +300,7 @@
 
     <section>
 			<p class="slide-title">Future work </p>
-      <div class="box_style_wt20"> 
+      <div class="box_style_t20l0h100w50"> 
         <p class="slide_item_style1" style="padding-left: 5%; ">1. Point cloud-based </p>
       </div> 	
 		</section>
@@ -207,7 +308,7 @@
 
     <!--<section data-state="slide_">-->
     <!--    <p class="slide-title">This is a Template Slide for Demonstration</p>-->
-    <!--    <div class="slide_content_style1">-->
+    <!--    <div class="box_style_t20l0h100w50">-->
     <!--        <p>This is a Template Main Context1</p>-->
     <!--        <p>This is a Template Main Context2</p>-->
     <!--        <p>This is a Template Main Context3</p>-->
@@ -217,13 +318,13 @@
 
     <section data-state="Page_Acknowledgement">
       <p class="slide-title">Acknowledgement</p>
-      <ul class="slide_content_style1">
+      <ul class="box_style_t20l0h100w50">
         <li>People 1</li>
         <li>People 2</li>
         <li>People 3</li>
         <li>People 4</li>
       </ul>
-      <div class="slide_content_style1" style="width:50%">
+      <div class="box_style_t20l0h100w50" style="width:50%">
       </div>
       <div class="image-style1">
         <img id="img_group"   style="width: 100%; height:auto">
@@ -232,7 +333,7 @@
 
     <!--<section data-state="slide_">-->
     <!--    <p class="slide-title">This is a Template Slide for Demonstration</p>-->
-    <!--    <div class="slide_content_style1">-->
+    <!--    <div class="box_style_t20l0h100w50">-->
     <!--        <p>This is a Template Main Context1</p>-->
     <!--        <p>This is a Template Main Context2</p>-->
     <!--        <p>This is a Template Main Context3</p>-->
@@ -355,7 +456,7 @@
     console.log("The university logo is: ", img_university_logo)
     var imgdiv = document.createElement('img');
     document.body.appendChild(imgdiv);
-    imgdiv.classList.add('uzh_logo');
+    imgdiv.classList.add('univ_logo');
     imgdiv.id = "univ_logo"
     // await kjera.setupImage("univ_logo", img_university_logo)
     
@@ -380,13 +481,10 @@
     backgroundTransition: "zoom"
   });
 
-  // throw new Error("Stop here")
 
-
-  ///////////////////////////////////////////////////////////////
-  ////////////// Initialize the reveal.js framework /////////////
-  ///////////////////////////////////////////////////////////////
-
+  console.log("######################################")
+  console.log(">> Initializing the reveal.js framework")
+  console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
 
   /////////////////////////////////////////////
   ////// Auxiliary and onchange functions /////
@@ -399,12 +497,12 @@
     var pageNumberElement = document.querySelector( '.page-number' );
     if ( pageNumberElement ) {
       pageNumberElement.innerHTML = pageString;
-      pageNumberElement.style.zIndex = 0
+      pageNumberElement.style.zIndex = 5
     } else {
       var pagediv = document.createElement( 'div' );
       pagediv.classList.add( 'page-number' );
       pagediv.innerHTML = pageString;
-      pagediv.style.zIndex = 0
+      pagediv.style.zIndex = 5
       document.body.appendChild( pagediv );
     }
 
@@ -431,6 +529,7 @@
     if ( found_chapterbreak && found_chapterbreakimg.src.slice(0,4) !== "data") {
       found_chapterbreakimg.className = "bgimg_style_rsmall"
       found_chapterbreakimg.src = img_chapter_break
+      found_chapterbreakimg.style.zIndex = -10
     }
   });
 

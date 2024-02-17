@@ -2,13 +2,19 @@ body {
     margin: 0;
 }
 
+.slides{
+    width: 55% !important;
+    height: 55% !important;
+    transform: translate(-50%, -50%) scale(1.5) !important; 
+}
+
 section {
     position: absolute !important;
     top:0  !important;
     left:0  !important;
     height: 100%  !important;
     width: 100%  !important;
-    /*background: blue !important;*/
+    /* background: blue !important; */
 }
 
 canvas {
@@ -17,12 +23,12 @@ canvas {
 
 .presentation_title {
     position: absolute !important;
-    top:50px; 
-    width:100%;
-    font-size: 45px !important;
+    top: 5% !important; 
+    width: 100% !important;
+    font-size: 35px !important;
     font-weight: bold !important;
     line-height: 1.25 !important;
-    padding-bottom: 20px !important;
+    padding-bottom: 0 !important;
 }
 .presentation_info {
     padding-right: 50px !important;
@@ -39,9 +45,10 @@ canvas {
     right: 8%;
     color: black;
     font-size: 36px;
+    z-index: -1;
 }
 
-.uzh_logo{
+.univ_logo{
     position: absolute !important;
     top: 2.5vh !important;
     left: 2.5vw !important;
@@ -81,45 +88,108 @@ canvas {
     transition: opacity 0.3s;
 }
 
+/* Title for each slides */
 .slide-title {
     position: absolute !important;
-    top: 12.5% !important;
-    left: 2.5% !important;
+    top: 10% !important;
+    left: 0 !important;
     padding: 10px !important;
     font-size: 25px !important;
     font-weight: bold !important;
     z-index:auto !important;
 }
 
-/* Left text and right figure style pair*/
-.slide_content_style1{
+/* Left align box in left half */
+.box_style_t20l0h100w100{
     position: absolute !important;
     top: 20% !important;
-    left: 2.5% !important;
-    width: 45% !important;
-    padding: 10px !important;
-    font-size: 20px !important;
-    text-align: left !important;
-}
-
-.box_style_wt20{
-    position: absolute !important;
-    top: 20% !important;
-    left: 2.5% !important;
+    left: 0 !important;
+    height: 90% !important;
     width: 100% !important;
     padding: 10px !important;
     font-size: 20px !important;
     text-align: left !important;
 }
-
-.box_style_mt20{
+.box_style_t20l0h100w50{
     position: absolute !important;
     top: 20% !important;
-    left: 2.5% !important;
-    width: 47.5% !important;
+    left: 0 !important;
+    height: 90% !important;
+    width: 50% !important;
     padding: 10px !important;
     font-size: 20px !important;
     text-align: left !important;
+}
+
+/* Center aligned box in left half */
+.box_style_t50l25h100c{
+    position: absolute !important;
+    top: 50% !important;
+    left: 25% !important;
+    height: 90% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    text-align: left !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.box_style_t75l25h100c{
+    position: absolute !important;
+    top: 75% !important;
+    left: 25% !important;
+    height: 90% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    text-align: left !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.box_style_t75l25w50c{
+    position: absolute !important;
+    top: 75% !important;
+    left: 25% !important;
+    width: 50% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    text-align: left !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+
+/* Center aligned box in center */
+.box_style_t50l50h100c{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    height: 90% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    text-align: left !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.box_style_t75l50w100c{
+    position: absolute !important;
+    top: 75% !important;
+    left: 50% !important;
+    width: 100% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    text-align: left !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.bgimg_style_welcome{
+    position: absolute !important;
+    top: 10px !important;
+    right: -300px !important;
+    height: 700px !important;
+    width: auto !important;
+    rotate: -30deg !important;
+    opacity: 0.25 !important;
+    filter: blur(5px) !important;
+    z-index: -99 !important;
+    /* position: absolute; top:10px; right:-300px; opacity:0.25; transform: rotate(-30deg); filter: blur(2px); height: 700px; width: auto; z-index: -1; */
 }
 
 .bgimg_style_rbig{
@@ -146,18 +216,127 @@ canvas {
     z-index: -99 !important;
 }
 
-.bgimg_style_welcome{
+/* Figure: top 5%, left 50%, height 50% ????? */
+/* .box_style_t5l50h50{
     position: absolute !important;
-    top: 10px !important;
-    right: -300px !important;
-    height: 700px !important;
-    width: auto !important;
-    rotate: -30deg !important;
-    opacity: 0.25 !important;
-    filter: blur(5px) !important;
-    z-index: -99 !important;
-    /* position: absolute; top:10px; right:-300px; opacity:0.25; transform: rotate(-30deg); filter: blur(2px); height: 700px; width: auto; z-index: -1; */
+    top: 5% !important;
+    left: 50% !important;
+    height: 45% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+} */
+
+/* Figure: top 5%; left 50%; height 100% */
+.box_style_t5l50h100{
+    position: absolute !important;
+    top: 5% !important;
+    left: 50% !important;
+    height: 90% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
 }
+
+.box_style_t5l50w50{
+    position: absolute !important;
+    top: 5% !important;
+    left: 50% !important;
+    width: 50% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+}
+
+/* make the box in the middle of the right half of the slide */
+.box_style_t50l50w50{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 50% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    transform: translateY(-50%);
+}
+
+.box_style_t50l50h100{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    height: 90% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    transform: translateY(-50%);
+}
+
+/* Right 3/4 part; Full height boxes; Center align */
+.box_style_t50r75h100c{
+    position: absolute !important;
+    top: 50% !important;
+    left: 75% !important;
+    height: 90% !important;
+    width: 50% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    transform: translate(-50%, -50%);
+}
+.box_style_t50r75w50c{
+    position: absolute !important;
+    top: 50% !important;
+    left: 75% !important;
+    width: 50% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    transform: translate(-50%, -50%);
+}
+.box_style_t20r75w50{
+    position: absolute !important;
+    top: 20% !important;
+    left: 75% !important;
+    width: 50% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    transform: translateX(-50%);
+}
+.box_style_t20r75h75w50{
+    position: absolute !important;
+    top: 20% !important;
+    left: 75% !important;
+    height: 75% !important;
+    width: 50% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    transform: translateX(-50%);
+}
+
+/* Right 3/4 part; Half height boxes; Center align */
+.box_style_t25r75h50c{
+    position: absolute !important;
+    top: 20% !important;
+    left: 75% !important;
+    height: 50% !important;
+    /* padding: 10px !important; */
+    font-size: 20px !important;
+    transform: translate(-50%, -50%);
+}
+.box_style_t25r75w50c{
+    position: absolute !important;
+    top: 20% !important;
+    left: 75% !important;
+    width: 50% !important;
+    /* padding: 10px !important; */
+    font-size: 20px !important;
+    transform: translate(-50%, -50%);
+}
+
+.box_style_t75r75h50c{
+    position: absolute !important;
+    top: 70% !important;
+    left: 75% !important;
+    height: 50% !important;
+    /* padding: 10px !important; */
+    font-size: 20px !important;
+    transform: translate(-50%, -50%);
+}
+
+
 
 
 
@@ -165,6 +344,7 @@ canvas {
 .slide_item_style1{
     padding-bottom: 20px  !important;
     font-size: 20px  !important;
+    padding-left: 5%  !important;
 }
 
 .image-style1{
@@ -202,7 +382,7 @@ canvas {
 
 .reference_style{
     position: absolute !important;
-    bottom: 8% !important;
+    bottom: 5% !important;
     left: 0 !important;
     color: rgb(108, 108, 108) !important;
     font-size: 8px !important;
@@ -218,8 +398,9 @@ canvas {
 .content_subtitle{
     background: #e6f0b680 !important;
     padding: 5px !important;
-    margin-top: 10px !important;
-    margin-bottom: 20px !important;
+    /* margin-top: 10px !important;
+    margin-bottom: 20px !important; */
+    margin: 0 auto !important;
     background: radial-gradient(circle at center, #e6f0b680, #e6f0b630) !important;
     border-radius: 10px !important;
     background-color: #e6f0b680 !important;
