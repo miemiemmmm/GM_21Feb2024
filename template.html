@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Group Meeting Yang Zhang</title>
+  <script type="module">
+    // Load the three.js for 3d object visualization
+    import * as THREE from  "https://cdn.jsdelivr.net/npm/three@0.127.0/build/three.module.js"
+    import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.127.0/examples/jsm/controls/OrbitControls.js"
+    import { PLYLoader } from "https://cdn.jsdelivr.net/npm/three@0.127.0/examples/jsm/loaders/PLYLoader.js"
+    window.THREE = THREE;
+    window.OrbitControls = OrbitControls;
+    window.PLYLoader = PLYLoader
+  </script>
+
+  <!-- Load reveal.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css" integrity="sha512-V5fKCVKOFy36w8zJmLzPH5R6zU6KvuHOvxfMRczx2ZeqTjKRGSBO9yiZjCKEJS3n6EmENwrH/xvSwXqxje+VVA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" integrity="sha512-QYXU3Cojl94ZRiZRjUZpyg1odj9mKTON9MsTMzGNx/L3JqvMA3BQNraZwsZ83UeisO+QMVfFa83SyuYYJzR9hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Load jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" integrity="sha512-jGR1T3dQerLCSm/IGEGbndPwzszJBlKQ5Br9vuB0Pw2iyxOy+7AK+lJcCC8eaXyz/9du+bkCy4HXxByhxkHf+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Load 3DMol.js -->
+  <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+  <script src="https://3Dmol.org/build/3Dmol.ui-min.js"></script>
+
+  <!-- Load MathJax for labex representation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML"></script>
+
+  <!-- Load the customized modules -->
+  <script type="module" src="https://miemiemmmm.b-cdn.net/CM_Feb2024/modules.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+
+</head>
+
+
+<body>
+<div class="reveal">
+  <!-- Add laser pointer object -->
+  <div class="laser-pointer"></div>
+
+  <div class="slides" id="slide_container">
+    <!--
+    Welcome page
+    The background image is set in the javascript part
+    -->
+    <section data-state="Title_Page">
+      <div style="position:relative; height:300px; width:100%; top:5%"><p class="presentation_title" style="top:50px; width:100%">This is a Template Title for This Presentation</p></div>
+      <p class="presentation_title2">Your Name</p>
+      <p class="presentation_title2">Date / Time</p>
+      <p class="presentation_title2">Your Group</p>
+      <p class="presentation_title2">Your Department</p>
+      <img id="welcome_bgimage" src="welcome.png" style="position: absolute; top:10px; right:-300px; opacity:0.25; transform: rotate(-30deg); filter: blur(2px); height: 700px; width: auto;">
+    </section>
+
+    <!--Template page-->
+    <!--<section data-state="slide_">-->
+    <!--    <p class="slide-title">This is a Template Slide for Demonstration</p>-->
+    <!--    <div class="slide_content_style1">-->
+    <!--        <p>This is a Template Main Context1</p>-->
+    <!--        <p>This is a Template Main Context2</p>-->
+    <!--        <p>This is a Template Main Context3</p>-->
+    <!--    </div>-->
+    <!--    <p class="reference_style">This is a template reference.</p>-->
+    <!--</section>-->
+
+    <section data-state="slide_OutlinePage">
+      <p class="slide-title">Outline</p>
+      <div class="slide_content_style1">
+        <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 1: Example Chapter </p>
+        <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 2: Example Chapter </p>
+        <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 3: Example Chapter </p>
+        <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 4: Example Chapter </p>
+        <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 5: Example Chapter </p>
+      </div>
+
+      <div class="image-style1">
+        <img src="welcome.png" style="position: absolute; top:10px; right:-300px; opacity:0.25; transform: rotate(-30deg); height: 700px; width: auto; filter: blur(5px);" >
+      </div>
+    </section>
+
+
+    <!--
+    Page template for chapter break.
+    The class name of the <div> includes:
+        chapter_break_container
+    The <img> is automatically set to the default image for chapter break
+    -->
+    <section>
+			<div class="chapter_break_container">
+				<p class="chapter_break">This is the start of Chapter 1</p>
+				<img>
+			</div>
+		</section>
+
+    <section>
+      <p class="slide-title">This is a Template for the Topic 1 to Discuss</p>
+      <div class="slide_content_style1">
+        <p class="slide_item_style1" style="padding-left: 10%; ">1. Point 1: Example Item </p>
+        <p class="slide_item_style1" style="padding-left: 10%; ">2. Point 2: Example Item </p>
+        <p class="slide_item_style1" style="padding-left: 10%; ">3. Point 3: Example Item </p>
+        <p class="slide_item_style1" style="padding-left: 10%; ">4. Point 4: Example Item </p>
+        <p class="slide_item_style1" style="padding-left: 10%; ">5. Point 5: Example Item </p>
+      </div>
+
+      <div class="image-style1">
+        <img src="welcome.png" style="position: absolute; top:10px; right:-300px; opacity:0.25; transform: rotate(-30deg); height: 700px; width: auto; filter: blur(5px);" >
+      </div>
+      <p class="reference_style">This is a template reference.</p>
+    </section>
+
+        <section>
+			<div class="chapter_break_container">
+				<p class="chapter_break">This is the start of Chapter 2</p>
+				<img>
+			</div>
+		</section>
+
+
+    <!--<section data-state="slide_">-->
+    <!--    <p class="slide-title">This is a Template Slide for Demonstration</p>-->
+    <!--    <div class="slide_content_style1">-->
+    <!--        <p>This is a Template Main Context1</p>-->
+    <!--        <p>This is a Template Main Context2</p>-->
+    <!--        <p>This is a Template Main Context3</p>-->
+    <!--    </div>-->
+    <!--    <p class="reference_style">This is a template reference.</p>-->
+    <!--</section>-->
+
+    <section data-state="Page_Acknowledgement">
+      <p class="slide-title">Acknowledgement</p>
+      <ul class="slide_content_style1">
+        <li>People 1</li>
+        <li>People 2</li>
+        <li>People 3</li>
+        <li>People 4</li>
+      </ul>
+      <div class="slide_content_style1" style="width:50%">
+      </div>
+      <div class="image-style1">
+        <img id="img_group"   style="width: 100%; height:auto">
+      </div>
+    </section>
+
+    <!--<section data-state="slide_">-->
+    <!--    <p class="slide-title">This is a Template Slide for Demonstration</p>-->
+    <!--    <div class="slide_content_style1">-->
+    <!--        <p>This is a Template Main Context1</p>-->
+    <!--        <p>This is a Template Main Context2</p>-->
+    <!--        <p>This is a Template Main Context3</p>-->
+    <!--    </div>-->
+    <!--    <p class="reference_style">This is a template reference.</p>-->
+    <!--</section>-->
+
+  </div>
+</div>
+
+
+
+<script type="module">
+  import * as kjera from "https://miemiemmmm.b-cdn.net/CM_Feb2024/modules.js"
+  // "https://cdn.jsdelivr.net/gh/miemiemmmm/GM_21Feb2024@main/modules.js
+  // import * as kjera from "./modules.js" // Using local modules.js, for development only
+
+  ////////////////////////////////////////////////////
+  ////// Global Variables and On-load Actions ////////
+  ////////////////////////////////////////////////////
+
+  // NOTE: If you are using Private Github Repo to host your slides,
+  //       you need to generate a Fine-Grained Personal Access Tokens
+  //       with the content access to your repo and replace the GITHUB_FINE_GRAINED_TOKEN with the token
+  //       If you are using Public Github Repo, Just comment the Authorization line
+  // For more details about Fine-Grained Personal Access Tokens:
+  // https://github.blog/2022-10-18-introducing-fine-grained-personal-access-tokens-for-github/
+  const github_auth = {
+    // Authorization: "Bearer GITHUB_FINE_GRAINED_TOKEN",
+    Accept: "application/vnd.github+object",
+  };
+  // NOTE: Replace the USER_NAME and REPO_NAME with your own Github user name and repository name
+  // https://api.github.com/repos/<USER_NAME>/<REPO_NAME>/contents/
+  const repo_url = "https://api.github.com/repos/miemiemmmm/GM_21Feb2024/contents/";
+  
+  kjera.set_repo(repo_url)
+  // Setting up token could improve the amount of traffic you can send to Github
+  kjera.set_token("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")
+
+
+  console.log("######################################")
+  console.log(">> Preparing the starting environment")
+  console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+
+  const PRELOAD_FIGURES = false
+  const FIGURES = {}
+	if (PRELOAD_FIGURES == true){
+    console.log("Before get all images <<<<<<<<<<<<<")
+    kjera.getAllImages(FIGURES)
+    console.log("After get all images <<<<<<<<<<<<<")
+	}
+
+  function get_image_url_from_storage(filename){
+    let storage_url = "https://miemiemmmm.b-cdn.net/CM_Feb2024/"
+    let returl = storage_url + filename
+    console.log("Getting the image url: ", returl)
+    return returl
+  }
+  // let read_key = "f2134ecf-99e0-4edd-9af74cef58ed-5a60-4818"
+  // https://miemiemmmm.b-cdn.net/uzh_logo_e_pos_web_main.jpg
+  // https://miemiemmmm.b-cdn.net/CM_Feb2024/Group_photo.png
+  //  + "?AccessKey="+read_key
+
+
+  // Whether or not to PRELOAD all images from the given Github Repo
+  // NOTE: Perticularly useful when you do the final presentation
+  //       You might want to disable it when you are still developing your slides
+
+
+  const img_university_logo = get_image_url_from_storage("uzh_logo_e_pos_web_main.jpg")
+  const img_welcome = get_image_url_from_storage("welcome.png")
+  const img_chapter_break = get_image_url_from_storage("welcome.png")
+
+  // Default background color for all 3D scenes
+  // Use the HEXDEC color code without the "#" sign
+  const scene_bgcolor = "FFF9DE";
+
+	//////////// A Typical Animation Function ////////////
+	// function animate() {
+	//     requestAnimationFrame(animate);
+	//     renderer.render(scene, camera);
+	// }
+	// animate();
+	/////////////////////////////////////////////////////
+
+  // Note sure if this is needed or not 
+  function reset_canvas(parent_div, viewer){
+    // The canvas size is reset for the 3Dmol viewer if you switch slides
+    // Reset the canvas size when you go back to the slide that contains the 3Dmol viewer
+    var container = document.getElementById(parent_div);
+    // var width = container.clientWidth;
+    var width = container.offsetWidth;
+    var height = container.clientHeight;
+    console.log("Set the width/height of the canvas: ",parent_div, "height/width:", height, width)
+    viewer.setWidth(width);
+    viewer.setHeight(height);
+    viewer.render();
+    // $("#"+parent_div+" canvas").css({"position": "relative", "width":"100%", "height": "100%"})
+  }
+
+
+  /////////////////////////////////////////////////
+  //////////// On-load Functions to do ////////////
+  /////////////////////////////////////////////////
+
+  // Set up the background picture of the welcome slide
+  await kjera.setupImage("welcome_bgimage", img_welcome)
+  
+  // setupImage("welcome_bgimage", repo_url + img_welcome)
+
+
+
+    // Declare global image variables for potential reuse
+    // var univ_logo
+  var b64_chapter_break
+
+  (async ()=>{
+    // Set university logo
+    // univ_logo = await kjera.getImageb64(repo_url + img_university_logo);
+    console.log("The university logo is: ", img_university_logo)
+    var imgdiv = document.createElement('img');
+    document.body.appendChild(imgdiv);
+    imgdiv.classList.add('uzh_logo');
+    // imgdiv.src = img_university_logo;
+    imgdiv.id = "univ_logo"
+    await kjera.setupImage("univ_logo", img_university_logo)
+    
+
+    // console.log("The chapter break image is: ", img_chapter_break)
+    // let test = await kjera.getImageb64(img_chapter_break);
+    // console.log("The test is: ", test)
+    console.log(img_chapter_break)
+
+    // b64_chapter_break = await kjera.getImageb64(repo_url + img_chapter_break);
+  })()
+
+
+
+
+
+
+  Reveal.initialize({
+    // Set the theme to white
+    theme: 'white',
+    // Set the transition style to slide
+    transition: 'convex',
+    backgroundTransition: "zoom"
+  });
+
+  // throw new Error("Stop here")
+
+
+  ///////////////////////////////////////////////////////////////
+  ////////////// Initialize the reveal.js framework /////////////
+  ///////////////////////////////////////////////////////////////
+
+
+  /////////////////////////////////////////////
+  ////// Auxiliary and onchange functions /////
+  /////////////////////////////////////////////
+  Reveal.addEventListener( 'slidechanged', function( event ) {
+    // Add the footer page number
+    var pageNumber = event.indexh + 1;
+    var totalPages = Reveal.getTotalSlides();
+    var pageString = pageNumber + '/' + totalPages;
+    var pageNumberElement = document.querySelector( '.page-number' );
+    if ( pageNumberElement ) {
+      pageNumberElement.innerHTML = pageString;
+      pageNumberElement.style.zIndex = 0
+    } else {
+      var pagediv = document.createElement( 'div' );
+      pagediv.classList.add( 'page-number' );
+      pagediv.innerHTML = pageString;
+      pagediv.style.zIndex = 0
+      document.body.appendChild( pagediv );
+    }
+
+    // ??????????????????
+    // var symbol_fig = document.querySelector( '.symbol_fig' );
+    // if ( symbol_fig ) {
+    //     symbol_fig.src = image_symbol
+    // } else {
+    //     var symboldiv = document.createElement( 'img' );
+    //     symboldiv.classList.add( 'symbol_fig' );
+    //     symboldiv.src = image_symbol;
+    //     symboldiv.style.zIndex = 0
+    //     document.body.appendChild(symboldiv)
+    // }
+
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    console.log("ViewPort Width:", viewportWidth, "/ Height", viewportHeight);
+    // $("#slide_container").css({"width": String(viewportWidth*0.45)+"px"})
+
+    // setup break slide
+    var found_chapterbreak = event.currentSlide.querySelector( '.chapter_break_container' );
+    var found_chapterbreakimg = event.currentSlide.querySelector( '.chapter_break_container img' );
+    if ( found_chapterbreak && found_chapterbreakimg.src.slice(0,4) !== "data") {
+      found_chapterbreakimg.src = img_chapter_break
+      found_chapterbreakimg.style.zIndex = -10;
+      found_chapterbreakimg.style.width = '75%';
+      found_chapterbreakimg.style.position = "absolute"
+      found_chapterbreakimg.style.transform = 'rotate(-30deg)';
+      found_chapterbreakimg.style.filter = "blur(5px)";
+      found_chapterbreakimg.style.bottom = 0;
+      found_chapterbreakimg.style.right = "-30%";
+      found_chapterbreakimg.style.opacity = 0.2;
+      var chapterbreak = document.querySelector( '.chapter_break')
+      chapterbreak.style.zIndex = 999
+    }
+  });
+
+  // Laser pointer function for the slides
+  const laserPointer = document.querySelector('.laser-pointer');
+  var usingLaser = false;
+  // Enable/disable the laser pointer on holding the 'L' key (key code 76)
+  document.addEventListener('keydown', (event) => {
+    if (event.key == "1" && !usingLaser){
+      laserPointer.style.opacity = 1;
+      usingLaser=true
+      $('body').css('cursor', 'none');
+      laserPointer.style.left = -100+"px";
+      laserPointer.style.top = -100+"px";
+    } else {
+      laserPointer.style.opacity = 0;
+      usingLaser=false
+      $('body').css('cursor', 'default');
+    }
+  });
+
+  // Move the laser pointer with the mouse
+  document.addEventListener('mousemove', (event) => {
+    if (usingLaser) {
+      laserPointer.style.left = event.clientX - laserPointer.clientWidth / 2 + 'px';
+      laserPointer.style.top = event.clientY - laserPointer.clientHeight / 2 + 'px';
+    }
+  });
+
+  $(".gallery-item").hover(
+    function() {
+      $(this).css({"z-index": 999})
+    },
+    function() {
+      $(this).css({"z-index": 0})
+    }
+  );
+
+</script>
+
+</body>
+
+</html>
