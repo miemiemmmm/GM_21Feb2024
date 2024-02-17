@@ -7,26 +7,30 @@ section {
     top:0  !important;
     left:0  !important;
     height: 100%  !important;
-    /*width: 100%  !important;*/
+    width: 100%  !important;
     /*background: blue !important;*/
 }
+
 canvas {
     display: block;
 }
 
 .presentation_title {
     position: absolute !important;
+    top:50px; 
+    width:100%;
     font-size: 45px !important;
     font-weight: bold !important;
     line-height: 1.25 !important;
     padding-bottom: 20px !important;
 }
-.presentation_title2 {
+.presentation_info {
     padding-right: 50px !important;
     line-height: 1.25 !important;
     padding-bottom: 15px !important;
     text-align: right !important;
     font-size: 20px !important;
+    font-weight: bold !important;
 }
 
 .page-number {
@@ -97,6 +101,66 @@ canvas {
     font-size: 20px !important;
     text-align: left !important;
 }
+
+.box_style_wt20{
+    position: absolute !important;
+    top: 20% !important;
+    left: 2.5% !important;
+    width: 100% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    text-align: left !important;
+}
+
+.box_style_mt20{
+    position: absolute !important;
+    top: 20% !important;
+    left: 2.5% !important;
+    width: 47.5% !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    text-align: left !important;
+}
+
+.bgimg_style_rbig{
+    position: absolute !important;
+    top: 10px !important;
+    right: -300px !important;
+    height: 700px !important;
+    width: auto !important;
+    rotate: -30deg !important;
+    opacity: 0.25 !important;
+    filter: blur(5px) !important;
+    z-index: -99 !important;
+}
+
+.bgimg_style_rsmall{
+    position: absolute !important;
+    top: 40% !important;
+    right: -200px !important;
+    height: 400px !important;
+    width: auto !important;
+    rotate: -30deg !important;
+    opacity: 0.65 !important;
+    filter: blur(2px) !important;
+    z-index: -99 !important;
+}
+
+.bgimg_style_welcome{
+    position: absolute !important;
+    top: 10px !important;
+    right: -300px !important;
+    height: 700px !important;
+    width: auto !important;
+    rotate: -30deg !important;
+    opacity: 0.25 !important;
+    filter: blur(5px) !important;
+    z-index: -99 !important;
+    /* position: absolute; top:10px; right:-300px; opacity:0.25; transform: rotate(-30deg); filter: blur(2px); height: 700px; width: auto; z-index: -1; */
+}
+
+
+
 
 .slide_item_style1{
     padding-bottom: 20px  !important;
@@ -177,7 +241,7 @@ ul li{
 
 .chapter_break{
     position: absolute !important;
-    top : 50% !important;
+    top : 40% !important;
     left: 50% !important;
     width:100% !important;
     font-size: 45px !important;
