@@ -114,7 +114,7 @@ canvas {
     position: absolute !important;
     top: 20% !important;
     left: 0 !important;
-    height: 90% !important;
+    height: auto !important;
     width: 50% !important;
     padding: 10px !important;
     font-size: 20px !important;
@@ -291,6 +291,7 @@ canvas {
     top: 20% !important;
     left: 75% !important;
     width: 50% !important;
+    /* height: auto !important; */
     padding: 10px !important;
     font-size: 20px !important;
     transform: translateX(-50%);
@@ -299,7 +300,7 @@ canvas {
     position: absolute !important;
     top: 20% !important;
     left: 75% !important;
-    height: 75% !important;
+    height: 65% !important;
     width: 50% !important;
     padding: 10px !important;
     font-size: 20px !important;
@@ -312,6 +313,7 @@ canvas {
     top: 20% !important;
     left: 75% !important;
     height: 50% !important;
+    width: 50% !important;
     /* padding: 10px !important; */
     font-size: 20px !important;
     transform: translate(-50%, -50%);
@@ -331,6 +333,7 @@ canvas {
     top: 70% !important;
     left: 75% !important;
     height: 50% !important;
+    width: 50% !important;
     /* padding: 10px !important; */
     font-size: 20px !important;
     transform: translate(-50%, -50%);
@@ -398,8 +401,8 @@ canvas {
 .content_subtitle{
     background: #e6f0b680 !important;
     padding: 5px !important;
-    /* margin-top: 10px !important;
-    margin-bottom: 20px !important; */
+    font-size: 15px !important;
+    /* margin-bottom: 5px !important; */
     margin: 0 auto !important;
     background: radial-gradient(circle at center, #e6f0b680, #e6f0b630) !important;
     border-radius: 10px !important;
