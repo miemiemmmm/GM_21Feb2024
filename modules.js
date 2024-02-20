@@ -263,6 +263,19 @@ async function add3DMolObject(divid, fileurl){
   return viewer
 }
 
+async function fetchFileFromCDN(fileurl){
+  // Fetch file from Github via content API
+  // Assume it is the file path to the image in the repo
+  const ret = await fetch(fileurl);
+  if (!ret.ok){
+    console.log("Failed to fetch the file from CDN: ", fileurl)
+    return ""
+  } else {
+    return ret.text()
+  }
+}
+
+
 async function initPLYObject(divid, fileurl){
   // Initialize the scene with a ply object
   const THREE = window.THREE;
@@ -287,7 +300,7 @@ async function initPLYObject(divid, fileurl){
   }
   // Setup for the Scene, Background color, and light
   const scene = new THREE.Scene();
-  renderer.setClearColor("#"+scene_bgcolor);
+  renderer.setClearColor("#FAF7F2");
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // 0.5 intensity
   scene.add(ambientLight);
   const light = new THREE.DirectionalLight(0xffffff, 1, 0);
@@ -299,8 +312,11 @@ async function initPLYObject(divid, fileurl){
 
   // Convert the content from base 64 to string
   console.log("Loading the plyfile", fileurl)
-  const plycontent = atob(await getUrlContents(fileurl));
+  // const plycontent = atob(await getUrlContents(fileurl));
+  const plycontent = await fetchFileFromCDN(fileurl);
+  // console.log("The final ply content is ", plycontent)
   var mesh = loadPLYMesh(plycontent, scene, camera, light);
+  console.log("The mesh is ", mesh)
 
   scene.add(mesh);
   camera.position.set(0, 0, 20);

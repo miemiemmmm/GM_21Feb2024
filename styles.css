@@ -25,7 +25,7 @@ canvas {
     position: absolute !important;
     top: 5% !important; 
     width: 100% !important;
-    font-size: 35px !important;
+    font-size: 45px !important;
     font-weight: bold !important;
     line-height: 1.25 !important;
     padding-bottom: 0 !important;
@@ -114,7 +114,7 @@ canvas {
     position: absolute !important;
     top: 20% !important;
     left: 0 !important;
-    height: auto !important;
+    height: 80% !important;
     width: 50% !important;
     padding: 10px !important;
     font-size: 20px !important;
@@ -300,7 +300,7 @@ canvas {
     position: absolute !important;
     top: 20% !important;
     left: 75% !important;
-    height: 65% !important;
+    height: 80% !important;
     width: 50% !important;
     padding: 10px !important;
     font-size: 20px !important;
@@ -340,13 +340,16 @@ canvas {
 }
 
 
-
-
-
+.caption_container{
+    display: flex !important;
+    margin-bottom: 10px !important;
+}
 
 .slide_item_style1{
-    padding-bottom: 20px  !important;
-    font-size: 20px  !important;
+    font-size: 25px  !important;
+    line-height: 1.25  !important;
+    padding-top: 4px  !important;
+    padding-bottom: 8px  !important;
     padding-left: 5%  !important;
 }
 
@@ -364,9 +367,9 @@ canvas {
 
 .highlight_style1{
     color: darkred !important;
-    font-size: 25px !important;
+    /* font-size: 25px !important;
     padding-top: 15px !important;
-    padding-bottom: 15px !important;
+    padding-bottom: 15px !important; */
     font-weight: bold !important;
 }
 
@@ -385,7 +388,7 @@ canvas {
 
 .reference_style{
     position: absolute !important;
-    bottom: 5% !important;
+    bottom: 0% !important;
     left: 0 !important;
     color: rgb(108, 108, 108) !important;
     font-size: 8px !important;
@@ -399,14 +402,13 @@ canvas {
 }
 
 .content_subtitle{
-    background: #e6f0b680 !important;
     padding: 5px !important;
     font-size: 15px !important;
-    /* margin-bottom: 5px !important; */
+    margin-bottom: 10px !important;
     margin: 0 auto !important;
-    background: radial-gradient(circle at center, #e6f0b680, #e6f0b630) !important;
+    background: radial-gradient(circle at center, #FFE6E6, #e6f0b630) !important;
     border-radius: 10px !important;
-    background-color: #e6f0b680 !important;
+    background-color: #FFE6E6 !important;
 }
 
 .mol-container canvas {
@@ -448,11 +450,11 @@ ul li{
 }
 
 .gallery-item {
-    position: relative !important;
+    /* position: relative !important;
     margin-right: 40px !important;
     margin-left: 40px !important;
     margin-top: 20px !important;
-    margin-bottom:50px !important;
+    margin-bottom:50px !important; */
 }
 
 .gallery-item img {
@@ -462,7 +464,7 @@ ul li{
 }
 
 .gallery-item:hover img {
-    transform: scale(3);
+    transform: scale(2);
 }
 
 .gallery-item_style2:hover img {
@@ -478,9 +480,9 @@ ul li{
 }
 
 .gallery-item figcaption {
-    position: absolute;
-    bottom: -20px;
-    left: 0;
+    /* position: absolute; */
+    /* bottom: -20px; */
+    /* left: 0; */
     width: 100%;
     text-align: center;
     border-radius: 10px;
@@ -491,5 +493,15 @@ ul li{
 }
 
 .gallery-item:hover figcaption {
-    transform: translateY(170px);
+    /* The caption translate 200% down by its size */
+    transform: translateY(200px);
 }
+
+.onhover_show{
+    color: white !important;
+}
+.onhover_show:hover{
+    color: black !important;
+    
+}
+
