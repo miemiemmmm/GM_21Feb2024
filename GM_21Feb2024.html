@@ -30,10 +30,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML"></script>
 
   <!-- Load the customized modules and style sheets -->
-  <script type="module" src="https://miemiemmmm.b-cdn.net/GM_Feb2024/modules.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://miemiemmmm.b-cdn.net/GM_Feb2024/styles.css">
-  <!-- <script type="module" src="./modules.js"></script>
-  <link rel="stylesheet" type="text/css" href="./styles.css"> -->
+  <!-- <script type="module" src="https://miemiemmmm.b-cdn.net/GM_Feb2024/modules.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://miemiemmmm.b-cdn.net/GM_Feb2024/styles.css"> -->
+  <script type="module" src="./modules.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
 
 </head>
 
@@ -74,7 +74,7 @@
     
     <!-- ######################################################### -->
     <section data-state="slide_OutlinePage">
-      <p class="slide-title" style="font-size: 30px !important; ">Outline</p>
+      <p class="slide-title">Outline</p>
       <div class="box_style_t20l0h100w100">
         <p class="slide_item_style1" style="font-size: 30px !important; ">1: Introduction </p>
         <p class="slide_item_style1" style="font-size: 30px !important; ">2: Three dimensional molecular representations </p>
@@ -101,15 +101,15 @@
 
     <!-- ######################################################### -->
     <section>
-      <p class="slide-title">Overall workflow of dynamic feature</p>
+      <p class="slide-title">Overall workflow </p>
       <div class="box_style_t20l0h100w50">
-        <p class="slide_item_style1 highlight_style1">Ultimate goal is to port 3D dynamic features to carry transfereable knowledge for the downstream tasks </p>
-        <p class="slide_item_style1">1. Needs to verify the effectiveness of the dynamic features in a simplified model</p>
-        <p class="slide_item_style1 highlight_style1" style="font-size: 15px !important;">Encoporate dynamicism in the molecular applications </p>
-        <p class="slide_item_style1">2. Needs an efficient method to extract the dynamic features from the MD trajectory </p> 
-        <p class="slide_item_style1 highlight_style1" style="font-size: 15px !important;">Limited complexity</p>
+        <p class="slide_item_style1 highlight_style1">Ultimate goal: Carry transfereable knowledge from MD trajectories to the downstream tasks </p>
+        <p class="slide_item_style1">1. Needs to measure the capacity of the dynamic features (in simplified models)</p>
+        <p class="slide_item_style1 highlight_style1" style="font-size: 20px !important;">Encoporate dynamicism in molecular applications </p>
+        <p class="slide_item_style1">2. Needs an efficient method to extract the dynamic features from MD trajectories (Part 1,2 in Fig 1) </p> 
+        <p class="slide_item_style1 highlight_style1" style="font-size: 20px !important;">Limited complexity</p>
         <p class="slide_item_style1">3. Needs an efficient way to generate the dynamic features from scratch (Part 3 in Fig 1 shows a data-driven manner) </p>
-        <p class="slide_item_style1 highlight_style1" style="font-size: 15px !important;">Skip the running of MD simulation</p>
+        <p class="slide_item_style1 highlight_style1" style="font-size: 20px !important;">Skip the running of MD simulation</p>
 
       </div>
       <div class="box_style_t50r75w50c" style="z-index: -10 !important;">
@@ -121,7 +121,7 @@
 
     <!-- ######################################################### -->
     <section>
-      <p class="slide-title">Current extensions to dynamic contents</p>
+      <p class="slide-title">Current dynamic contents in CV/CG</p>
       <div class="box_style_t20l0h100w50">
         <p class="slide_item_style1">Human pose recognition </p>
         <p class="slide_item_style1">Human pose generation </p>
@@ -156,19 +156,19 @@
 
     <!-- ######################################################### -->
     <section>
-      <p class="slide-title">Commonly used 3D representations in CG/CV</p>
+      <p class="slide-title">Commonly used 3D representations</p>
       <div class="box_style_t20l0h100w50">
         <p class="slide_item_style1">1. Point cloud (Fig 1, unordered set of points) </p> 
-        <p class="slide_item_style1">2. Triangle mesh (Fig 1, characterize surface) </p> 
+        <p class="slide_item_style1">2. Triangle mesh (characterize surface) </p> 
         <p class="slide_item_style1">3. 3D Voxel (Fig 2, volumetric occupancy) </p> 
-        <p class="slide_item_style1">4. Depth map (2D images, encode 3D infomation by color or intensity of color) </p>
+        <p class="slide_item_style1">4. Depth map (Fig 3, 2D image encoding 3D infomation by color or intensity of color) </p>
         <p class="slide_item_style1">5. Space-filling curve (encode local proximity via index) </p>
       </div>
 
       <div class="box_style_t75l25w50c" style="text-align: center !important; top: 80% !important; ">
         <img src="https://miemiemmmm.b-cdn.net/GM_Feb2024/Depthmap_demonstration.png" style="width: 55% !important; "> <br>
         <div style="display: flex !important;" >
-          <p class="content_subtitle" style="width: 55% !important; ">Fig 1. Depth map representation of 3D scene via 2D image. </p>
+          <p class="content_subtitle" style="width: 55% !important; ">Fig 3. Depth map representation of 3D scenes via 2D images. </p>
         </div>
       </div>
       
@@ -208,12 +208,12 @@
     <section>
       <p class="slide-title">Diverse 3D molecular representation</p>
       <div class="box_style_t20l0h100w50">
-        <p class="slide_item_style1">1. Molecular coordinates is a point cloud but typically requires a specific order for topology match </p>
+        <p class="slide_item_style1">1. Molecular coordinate is point cloud but typically requires a specific order for topology match </p>
         <!-- <p class="slide_item_style1">2. Molecular coordinates  </p> -->
         <p class="slide_item_style1">2. Surface mesh could be generated by marching cubes algorithm (Fig 1) </p>
         <p class="slide_item_style1">3. 3D voxel compuated by distance-based gaussian mapping (Fig 2) </p>
-        <p class="slide_item_style1">4. 3D voxelization requires iteration over each coordinates (requires normalization) and sum up by grid points </p>
-        <p class="slide_item_style1">5. 3D voxel could be mapped to 2D image via space-filling curve (by hilbert curve index)</p>
+        <p class="slide_item_style1">4. 3D voxelization requires iteration over each coordinates (requires normalization and summation)</p>
+        <p class="slide_item_style1">5. 3D voxel could be mapped to 2D image via space-filling curve (hilbert curve index)</p>
 
       </div>
 
@@ -249,14 +249,37 @@
       <div class="box_style_t20r75h75w50" >
         <img src="https://miemiemmmm.b-cdn.net/GM_Feb2024/FEater_Standard_workflow.png" style="width: 90% !important; ">
         <div class="caption_container">
-          <p class="content_subtitle" style="width: 90% !important; ">Fig 1. the workflow for the usage of FEater dataset for </p>
+          <p class="content_subtitle" style="width: 90% !important; ">Fig 1. Two-step usage of FEater dataset for benchmarking capacity of the model to classify flexible molecular blocks. </p>
         </div>
         
         <img src="https://miemiemmmm.b-cdn.net/GM_Feb2024/FEater_draftlogo.png" style="height: 50% !important; ">
         <div class="caption_container">
-          <p class="content_subtitle" style="width: 90% !important;">Fig 2. Drafted logo for FEater; Designed by DALL\(\cdot\)E-3 </p>
+          <p class="content_subtitle" style="width: 90% !important;">Fig 2. Drafted logo for FEater, a voxelized panda eating Phenylalanin (Of course AI failed to draw Phenylalanin correctly); Designed by DALL\(\cdot\)E-3 </p>
         </div>
         
+      </div>
+    </section>
+
+
+    <!-- ######################################################### -->
+    <section>
+      <p class="slide-title">FEater-Single and FEater-Dual dataset</p>
+      <div class="box_style_t20l0h100w50" style="text-align: center !important; display: flex; height:50% !important;">
+        <figure class="gallery-item">
+          <img src="https://miemiemmmm.b-cdn.net/GM_Feb2024/DataDriven_aligned3DMols.png" style="height: 300px; ">
+          <div class="caption_container">
+            <figcaption class="content_subtitle" style="width: 80% !important">Fig 1. 100 aligned structures (by \(C_{\alpha}, N, C\)) from FEater-Single dataset </figcaption>
+          </div>
+        </figure>
+      </div>
+
+      <div class="box_style_t20r75h75w50" style="text-align: center !important;">
+        <figure class="gallery-item " style="transform: translateX(-26%) !important; ">
+          <img src="https://miemiemmmm.b-cdn.net/GM_Feb2024/DataDrivenVisualization.png" style="height: 300px; ">
+          <div class="caption_container">
+            <figcaption class="content_subtitle" style="width: 80% !important">Fig 2. Five example structures from FEater-Single and FEater-Dual datasets (No alignment) </figcaption>
+          </div>
+        </figure>
       </div>
     </section>
 
@@ -266,34 +289,11 @@
       <p class="slide-title">Constructure and Featurization of the datasets</p>
       <div class="box_style_t20l0h100w50 " style="text-align: center !important;"> 
         <img src="https://miemiemmmm.b-cdn.net/GM_Feb2024/Algorithm_extraction.png" style="height: 80% !important; ">
-        <p class="content_subtitle" style="width: 80% !important;">Fig 1. The algorithm for the extraction of the single/dual-residue features. </p>
+        <p class="content_subtitle" style="width: 80% !important;">Fig 1. The algorithm for the extraction of the FEater datasets </p>
       </div>
       <div class="box_style_t20r75h75w50">
         <img src="https://miemiemmmm.b-cdn.net/GM_Feb2024/Algorithm_featurization.png" style="height: 80% !important; ">
-        <p class="content_subtitle" style="width: 80% !important;">Fig 2. The algorithm for the featurization of the single/dual-residue features. </p>
-      </div>
-    </section>
-
-
-    <!-- ######################################################### -->
-    <section>
-      <p class="slide-title">FEater-Single and FEater-Dual dataset</p>
-      <div class="box_style_t20l0h100w50" style="text-align: center !important; display: flex; ">
-        <figure class="gallery-item">
-          <img src="https://miemiemmmm.b-cdn.net/GM_Feb2024/DataDriven_aligned3DMols.png" style="height: 300px; ">
-          <div class="caption_container">
-            <figcaption class="content_subtitle" style="width: 80% !important">Fig 1. 100 aligned structures (by \(C_{\alpha}, N, C\)) from FEater-Single dataset. </figcaption>
-          </div>
-        </figure>
-      </div>
-
-      <div class="box_style_t20r75h75w50" style="text-align: center !important;">
-        <figure class="gallery-item " style="transform: translateX(-26%) !important; ">
-          <img src="https://miemiemmmm.b-cdn.net/GM_Feb2024/DataDrivenVisualization.png" style="height: 300px; ">
-          <div class="caption_container">
-            <figcaption class="content_subtitle" style="width: 80% !important">Fig 2. Five example structures from FEater-Single and FEater-Dual (No alignment) </figcaption>
-          </div>
-        </figure>
+        <p class="content_subtitle" style="width: 80% !important;">Fig 2. The algorithm for the featurization of the FEater datasets </p>
       </div>
     </section>
 
@@ -310,10 +310,11 @@
     <section>
       <p class="slide-title">Various molecular representations VS general-purposed networks </p>
       <div class="box_style_t20l0h100w50">
-        <p class="slide_item_style1">1. Coordinates could be viewed as point cloud and processed by <a style="font-weight: bold;">PointNet</a></p>
-        <p class="slide_item_style1">2. Surface mesh vertices could be viewed as point cloud (<a style="font-weight: bold;">PointNet too</a>)</p>
-        <p class="slide_item_style1">3. Property density map could be viewed as 3D voxel (<a style="font-weight: bold;">VoxNet</a>)</p>
-        <p class="slide_item_style1">4. Transforming 3D voxel to 2D via spacefilling curve could be viewed as image (<a style="font-weight: bold;">ResNet</a>)</p>
+        <p class="slide_item_style1 highlight_style1">Mainly focus on 3D geometries of molecule and involve as least topology as possible </p>
+        <p class="slide_item_style1">1. Coordinates could be viewed as point cloud and processed by <a style="font-weight: bold;">PointNet</a> (<a class="highlight_style1">No atom type/bond</a>)</p>
+        <p class="slide_item_style1">2. Surface mesh vertices could be viewed as point cloud (<a style="font-weight: bold;">PointNet</a>, <a class="highlight_style1">atomic radii is encoded while surface generation</a>)</p>
+        <p class="slide_item_style1">3. Property density map could be viewed as 3D voxel (<a style="font-weight: bold;">VoxNet</a>, <a class="highlight_style1">uniformed atom type</a>)</p>
+        <p class="slide_item_style1">4. Transforming 3D voxel to 2D image via hilbert curve (<a style="font-weight: bold;">ResNet</a>)</p>
       </div>
 
       <div class="box_style_t20r75w50">
@@ -324,29 +325,29 @@
 
     <!-- ######################################################### -->
     <section data-state="Example_3Dstage_Coord">
-      <p class="slide-title">Small quiz: What is the molecular block (<a style="font-weight: bold !important;">Coordinates</a>) </p>
+      <p class="slide-title">Small quiz: visual inspection (Coordinates) </p>
       <!-- Stage 1 -->
       <div class="box_style_t20l0h100w50" style="height: 80% !important; width: 50% !important;">
         <div id="coord_1"  style="height: 40% !important; width: 90% !important"></div>
-        <p class="slide_item_style1 " style="font-size: 20px !important; padding-left: 0 !important;">Stage 1: Coordinate feature of <a class="onhover_show" style="border: solid black;">Ile</a></p>
+        <p class="slide_item_style1 " style="font-size: 20px !important; padding-left: 0 !important;">Stage 1: Coordinates feature of <a class="onhover_show" style="border: solid black;">Ile</a></p>
         <div id="coord_3"  style="height: 40% !important; width: 90% !important"></div>
-        <p class="slide_item_style1" style="font-size: 20px !important; padding-left: 0 !important;">Stage 2: Coordinate feature of <a class="onhover_show" style="border: solid black;">Cys-Tyr</a></p>
+        <p class="slide_item_style1" style="font-size: 20px !important; padding-left: 0 !important;">Stage 2: Coordinates feature of <a class="onhover_show" style="border: solid black;">Cys-Tyr</a></p>
       </div>
       
       
       <!-- Stage 2 -->
       <div class="box_style_t20r75w50" style="height: 80% !important; width: 50% !important;">
         <div id="coord_2" style="height: 40% !important; width: 90% !important"> </div>
-        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important;">Stage 2: Coordinate of <a class="onhover_show" style="border: solid black;">Ile</a> with topology</p>
+        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important;">Stage 2: Coordinates of <a class="onhover_show" style="border: solid black;">Ile</a> with topology</p>
         <div id="coord_4"  style="height: 40% !important; width: 90% !important"></div>
-        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important">Stage 4: Coordinate of <a class="onhover_show" style="border: solid black;">Cys-Tyr</a> with topology</p>
+        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important">Stage 4: Coordinates of <a class="onhover_show" style="border: solid black;">Cys-Tyr</a> with topology</p>
       </div>
 
     </section>  
 
     <!-- ######################################################### -->
     <section data-state="Example_3Dstage_Surf">
-      <p class="slide-title">Small quiz: What is the molecular block (<a style="font-weight: bold !important;">Surface</a>) </p>
+      <p class="slide-title">Small quiz: visual inspection (Surface) </p>
       <!-- Stage 1 -->
       <div class="box_style_t20l0h100w50" style="height: 80% !important; width: 50% !important;">
         <div id="surface_1"  style="height: 40% !important; width: 90% !important"></div>
@@ -359,9 +360,9 @@
       <!-- Stage 2 -->
       <div class="box_style_t20r75w50" style="height: 80% !important; width: 50% !important;">
         <div id="surface_2" style="height: 40% !important; width: 90% !important"> </div>
-        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important;">Stage 2: Surface of <a class="onhover_show" style="border: solid black;">Cys</a> with topology</p>
+        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important;">Stage 2: Topology of <a class="onhover_show" style="border: solid black;">Cys</a> </p>
         <div id="surface_4"  style="height: 40% !important; width: 90% !important"></div>
-        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important">Stage 4: Surface of <a class="onhover_show" style="border: solid black;">Asn-His</a> with topology</p>
+        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important">Stage 4: Topology of <a class="onhover_show" style="border: solid black;">Asn-His</a> </p>
       </div>
 
     </section>  
@@ -369,7 +370,7 @@
 
     <!-- ######################################################### -->
     <section data-state="Example_3Dstage_Voxel">
-      <p class="slide-title">Small quiz: What is the molecular block (<a style="font-weight: bold !important;">3D voxel</a>) </p>
+      <p class="slide-title">Small quiz: visual inspection (3D voxel) </p>
 
       <!-- Stage 1 -->
       <div class="box_style_t20l0h100w50" style="height: 80% !important; width: 50% !important;">
@@ -383,9 +384,9 @@
       <!-- Stage 2 -->
       <div class="box_style_t20r75w50" style="height: 80% !important; width: 50% !important;">
         <div id="voxel_2" style="height: 40% !important; width: 90% !important"> </div>
-        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important;">Stage 2: 3D voxel of <a class="onhover_show" style="border: solid black;">Thr</a> with topology</p>
+        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important;">Stage 2: 3D voxel feature of <a class="onhover_show" style="border: solid black;">Thr</a> with topology</p>
         <div id="voxel_4"  style="height: 40% !important; width: 90% !important"></div>
-        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important">Stage 4: 3D voxel of <a class="onhover_show" style="border: solid black;">His-Ala</a> with topology</p>
+        <p class="slide_item_style1" style="padding-left: 0 !important; font-size: 20px !important; text-align: left !important">Stage 4: 3D voxel feature of <a class="onhover_show" style="border: solid black;">His-Ala</a> with topology</p>
       </div>
       
     </section> 
@@ -397,15 +398,15 @@
       <!-- TODO -->
       <div class="box_style_t20l0h100w50" style="width:45% !important; height:30% !important">
         <!-- <p class="slide_item_style1"> </p> -->
-        <p class="slide_item_style1">1. Coordinates/Meshes are heterogeneous features </p>
-        <p class="slide_item_style1">2. Voxels/Images are homogeneous features </p>
-        <p class="slide_item_style1">3. Dual-residue population abundancy largely depends on the population of the population of partners </p>
+        <p class="slide_item_style1">1. Coordinates and surface meshes are heterogeneous features </p>
+        <p class="slide_item_style1">2. Voxels and images are homogeneous features </p>
+        <p class="slide_item_style1">3. Dual-residue population abundancy depends on the population of dipeptide partners </p>
       </div>
 
       <div class="box_style_t20r75w50" style="text-align: left; width:45% !important; height:30% !important">
-        <!-- <p class="slide_item_style1">All of combinations are identified </p> -->
+        <p class="slide_item_style1">4. Sum over dual-residue population resembles the single-residue population </p>
         <p class="slide_item_style1">4. Feature data I/O from the storage medium is the bottleneck of training</p>
-        <p class="slide_item_style1">5. The size of 3D voxel data (\(32\times32\times32\) for each sample) inflats to 800 GB level</p>
+        <p class="slide_item_style1">5. The size of 3D voxel data (\(32\times32\times32\) each sample) inflats to over 650 GB (1.8 GB)</p>
         
       </div>
 
@@ -423,10 +424,10 @@
     <section>
       <p class="slide-title">Comparison of different feature representations </p>
       <div class="box_style_t20l0h100w50">
-        <p class="slide_item_style1 highlight_style1">Mainly focus on the 3D shape and involves as least topology as possible </p>
+        <!-- <p class="slide_item_style1 highlight_style1">Mainly focus on the 3D shape and involves as least topology as possible </p> -->
         <p class="slide_item_style1">1. With same amount of training samples (regardless of data size), convergence speed: </p>
         <p class="slide_item_style1" style="margin-left: 8%; margin-right:8%; ">ResNet(Hilbert curve) > PointNet(Coord) > PointNet(Surf) > VoxNet(Voxel) </p>
-        <p class="slide_item_style1">2. Single-residue-based classification is solvable, Dual-residue is harder but also solvable (ResNet + 2D Hilbert curve). </p>
+        <p class="slide_item_style1">2. Single-residue-based classification is solvable, Dual-residue is harder but also solvable (ResNet + Hilbert curve). </p>
         <p class="slide_item_style1">3. ResNet + Hilbert curve achieves good performance, but convergence is unstable (deeper ResNet is even worse, might stem from the fune-tuning of hyperparameters) </p>
         <p class="slide_item_style1 highlight_style1">4. Pure 3D-geometry carries significant structural features </p>
       </div>
@@ -445,8 +446,8 @@
         <p class="slide_item_style1">
           <p class="slide_item_style1">1. All of the model-network combinations could achieve good performance on the FEater-Single dataset (Over 90% accuracy) </p>
           <p class="slide_item_style1">2. Coordinate-centric (coordinate and voxel) both make confusion on intrinsic 3D arrangement (Met-Gln, Leu-Ile, Lys-Arg, Thr-Pro)</p>
-          <p class="slide_item_style1">3. Coordinate-centric features might require the encoding of weights of different atoms </p>  
-          <p class="slide_item_style1">4. Surface-based methods could capture the bond-length (coordinate) / atom-radius (surface, radii is encoded while surface generation) of atoms (Cys-Ser detection) </p>
+          <p class="slide_item_style1">3. Coordinate-centric features require the encoding of types (weights) of atoms </p>  
+          <p class="slide_item_style1">4. Surface-based methods could capture the atomic radius and potentially bond length features (No Cys-Ser confusion) </p>
         </p>
       </div>
       
@@ -464,8 +465,8 @@
       <div class="box_style_t20l0h100w50">
         <p class="slide_item_style1">1. ResNet + Hilbert curve almost perfectly solves the dual-residue classification problem (except some MET combinations) </p>
         <p class="slide_item_style1">2. 3D shape efficiency: Coord (PointNet) > Surf (PointNet) > Voxel (VoxNet) </p>
-        <p class="slide_item_style1">3. Simple/rigid residue (less degree of freedom) facilitates the classification (Gly -> Ala -> Pro -> Val)</p>
-        <p class="slide_item_style1">4. Flexible residue (more degree of freedom) makes the classification harder (Met -> Arg -> Gln -> Lys)</p>
+        <p class="slide_item_style1">3. Simple/rigid residue (less degrees of freedom) facilitates the classification (Gly -> Ala -> Pro -> Val)</p>
+        <p class="slide_item_style1">4. Flexible residue (more degrees of freedom) makes the classification harder (Met -> Arg -> Gln -> Lys)</p>
       </div>
 
       <div class="box_style_t20r75h75w50" style="z-index: -10 !important;">
@@ -476,12 +477,12 @@
 
     <!-- ######################################################### -->
     <section>
-      <p class="slide-title">Pretrained models on structures from molecular dynamics simulations </p>
+      <p class="slide-title">Pretrained models on MD structures </p>
       <div class="box_style_t20l0h100w50">
         <p class="slide_item_style1"> 
           <p class="slide_item_style1">1. Three trajectories from DEShaw research are used for the benchmarking of the pretrained models. </p>
-          <p class="slide_item_style1">2. The resultant performance remains consistent with the FEater accuracy on the dataset. </p>
-          <p class="slide_item_style1">3. By learning merely from the subtle 3D shapes, the network could extrapolate to the local structures from an MD trajectory. </p>
+          <p class="slide_item_style1">2. The resultant performance remains consistent with the FEater accuracy on the static dataset. </p>
+          <p class="slide_item_style1">3. By learning merely from the subtle 3D shapes, the network could extrapolate to the structures from MD trajectories. </p>
           <p class="slide_item_style1 highlight_style1">4. We need to uncouple the 3D structure before engineering features</p>
           <!-- TODO -->
         </p>
@@ -542,8 +543,8 @@
       <div class="box_style_t20l0h100w50"> 
         <p class="slide_item_style1">1. Grid point \(G_i\) work as observer : monitor particles within its eyesight (cutoff) </p>
         <p class="slide_item_style1">2. Observables are transcribed to a time series \(T_i\) for the computation of dynamic feature \(D_i\) </p>
-        <p class="slide_item_style1">3. Observables includes: \(N_{particle}\), \(B_{particle}\), \(R_g\), \(d_{mean}\), etc. </p>
-        <p class="slide_item_style1">4. Arbitrary dynamic feature could be computed on time series \(T_i\) <i>e.g.</i> mean, root mean square diviation</p>
+        <p class="slide_item_style1">3. Observables: \(N_{particle}\), \(B_{particle}\), \(R_g\), \(d_{mean}\), <i>etc</i>. </p>
+        <p class="slide_item_style1">4. Arbitrary dynamic feature could be computed on time series \(T_i\) <i>e.g.</i> mean, SD, RMSD</p>
         <p class="slide_item_style1">5. GPU-acceleration (CUDA) is used for the parallelization of the observation</p>
 
       </div>
@@ -560,9 +561,9 @@
 			<p class="slide-title">Future work </p>
       <div class="box_style_t20l0h100w50"> 
         <p class="slide_item_style1">1. Stringent test on the effectiveness of dynamic features in simplified models (FEater classification) </p> 
-        <p class="slide_item_style1">2. Finish the MD trajectory featurization pipeline (Shown in step 2 in Fig 1) </p> 
+        <p class="slide_item_style1">2. Finish the MD trajectory featurization pipeline (Shown in Step 2 in Fig 1) </p> 
         <p class="slide_item_style1">3. Benchmark the dynamic featurization speed </p> 
-        <p class="slide_item_style1">4. Apply the dynamic features in real applications e.g. protein-ligand affinity prediction (Step 1 in Fig 1) </p>
+        <p class="slide_item_style1">4. Apply the dynamic features in real applications e.g. protein-ligand binding affinity prediction (Step 1 in Fig 1) </p>
         <p class="slide_item_style1">5. Algorithm to generate dynamic features from scratch in a data-driven manner (Step 3 in Fig 1)</p>
 
       </div> 	
@@ -614,10 +615,10 @@
   ////////////////////////////////////////////////////
   ////// Global Variables and On-load Actions ////////
   ////////////////////////////////////////////////////
-  import * as kjera from "https://miemiemmmm.b-cdn.net/GM_Feb2024/modules.js"
+  // import * as kjera from "https://miemiemmmm.b-cdn.net/GM_Feb2024/modules.js"
   // If you use JSDelivr CDN, after you release the package on Github
   // "https://cdn.jsdelivr.net/gh/miemiemmmm/GM_21Feb2024@main/modules.js
-  // import * as kjera from "./modules.js" // Using local modules.js, for development only
+  import * as kjera from "./modules.js" // Using local modules.js, for development only
 
   // const github_auth = {
   //   // Authorization: "Bearer GITHUB_FINE_GRAINED_TOKEN",
