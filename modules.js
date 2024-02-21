@@ -312,11 +312,8 @@ async function initPLYObject(divid, fileurl){
 
   // Convert the content from base 64 to string
   console.log("Loading the plyfile", fileurl)
-  // const plycontent = atob(await getUrlContents(fileurl));
   const plycontent = await fetchFileFromCDN(fileurl);
-  // console.log("The final ply content is ", plycontent)
   var mesh = loadPLYMesh(plycontent, scene, camera, light);
-  console.log("The mesh is ", mesh)
 
   scene.add(mesh);
   camera.position.set(0, 0, 20);
@@ -356,9 +353,8 @@ async function addPLYtoStage(fileurl, scene, renderer, camera, light, offsets){
 }
 
 
-
-
 function testfunc(){
+  // Test function for the module development
   console.log("test function");
 }
 

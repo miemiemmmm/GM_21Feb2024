@@ -3,9 +3,10 @@ body {
 }
 
 .slides{
-    width: 55% !important;
-    height: 55% !important;
-    transform: translate(-50%, -50%) scale(1.5) !important; 
+    width: 80% !important;
+    height: 80% !important;
+    inset: 50% auto auto 50% !important;
+    transform: translate(-50%, -50%) !important; 
 }
 
 section {
@@ -99,86 +100,6 @@ canvas {
     z-index:auto !important;
 }
 
-/* Left align box in left half */
-.box_style_t20l0h100w100{
-    position: absolute !important;
-    top: 20% !important;
-    left: 0 !important;
-    height: 90% !important;
-    width: 100% !important;
-    padding: 10px !important;
-    font-size: 20px !important;
-    text-align: left !important;
-}
-.box_style_t20l0h100w50{
-    position: absolute !important;
-    top: 20% !important;
-    left: 0 !important;
-    height: 80% !important;
-    width: 50% !important;
-    padding: 10px !important;
-    font-size: 20px !important;
-    text-align: left !important;
-}
-
-/* Center aligned box in left half */
-.box_style_t50l25h100c{
-    position: absolute !important;
-    top: 50% !important;
-    left: 25% !important;
-    height: 90% !important;
-    padding: 10px !important;
-    font-size: 20px !important;
-    text-align: left !important;
-    transform: translate(-50%, -50%) !important;
-}
-
-.box_style_t75l25h100c{
-    position: absolute !important;
-    top: 75% !important;
-    left: 25% !important;
-    height: 90% !important;
-    padding: 10px !important;
-    font-size: 20px !important;
-    text-align: left !important;
-    transform: translate(-50%, -50%) !important;
-}
-
-.box_style_t75l25w50c{
-    position: absolute !important;
-    top: 75% !important;
-    left: 25% !important;
-    width: 50% !important;
-    padding: 10px !important;
-    font-size: 20px !important;
-    text-align: left !important;
-    transform: translate(-50%, -50%) !important;
-}
-
-
-/* Center aligned box in center */
-.box_style_t50l50h100c{
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    height: 90% !important;
-    padding: 10px !important;
-    font-size: 20px !important;
-    text-align: left !important;
-    transform: translate(-50%, -50%) !important;
-}
-
-.box_style_t75l50w100c{
-    position: absolute !important;
-    top: 75% !important;
-    left: 50% !important;
-    width: 100% !important;
-    padding: 10px !important;
-    font-size: 20px !important;
-    text-align: left !important;
-    transform: translate(-50%, -50%) !important;
-}
-
 .bgimg_style_welcome{
     position: absolute !important;
     top: 10px !important;
@@ -189,7 +110,6 @@ canvas {
     opacity: 0.25 !important;
     filter: blur(5px) !important;
     z-index: -99 !important;
-    /* position: absolute; top:10px; right:-300px; opacity:0.25; transform: rotate(-30deg); filter: blur(2px); height: 700px; width: auto; z-index: -1; */
 }
 
 .bgimg_style_rbig{
@@ -216,127 +136,75 @@ canvas {
     z-index: -99 !important;
 }
 
-/* Figure: top 5%, left 50%, height 50% ????? */
-/* .box_style_t5l50h50{
-    position: absolute !important;
-    top: 5% !important;
-    left: 50% !important;
-    height: 45% !important;
-    padding: 10px !important;
-    font-size: 20px !important;
-} */
 
-/* Figure: top 5%; left 50%; height 100% */
-.box_style_t5l50h100{
-    position: absolute !important;
-    top: 5% !important;
-    left: 50% !important;
-    height: 90% !important;
+/* ######################################### */
+.box_style_mainbody{
+    position: absolute;
+    inset: 20% 0 5% 0 !important;
     padding: 10px !important;
     font-size: 20px !important;
+    text-align: left;
 }
-
-.box_style_t5l50w50{
-    position: absolute !important;
-    top: 5% !important;
-    left: 50% !important;
-    width: 50% !important;
+.box_style_rightbound{
+    position: absolute;
+    inset: 20% 0 5% 50% !important;
     padding: 10px !important;
-    font-size: 20px !important;
+    font-size: 20px;
+    text-align: center;
 }
-
-/* make the box in the middle of the right half of the slide */
-.box_style_t50l50w50{
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    width: 50% !important;
+/* Full right bound (top from 5%) */
+.box_style_fullrightbound{
+    position: absolute;
+    inset: 5% 0 5% 50% !important;
     padding: 10px !important;
-    font-size: 20px !important;
-    transform: translateY(-50%);
+    font-size: 20px;
+    text-align: center;
 }
-
-.box_style_t50l50h100{
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    height: 90% !important;
+.box_style_leftbound{
+    position: absolute;
+    inset: 20% 50% 5% 0 !important;
     padding: 10px !important;
-    font-size: 20px !important;
-    transform: translateY(-50%);
+    font-size: 20px;
+    text-align: left;
 }
-
-/* Right 3/4 part; Full height boxes; Center align */
-.box_style_t50r75h100c{
-    position: absolute !important;
-    top: 50% !important;
-    left: 75% !important;
-    height: 90% !important;
-    width: 50% !important;
+.box_style_lowerbound{
+    position: absolute;
+    inset: 57.5% 0 5% 0 !important;
     padding: 10px !important;
-    font-size: 20px !important;
-    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: center;
 }
-.box_style_t50r75w50c{
-    position: absolute !important;
-    top: 50% !important;
-    left: 75% !important;
-    width: 50% !important;
+/* Upper left corner */
+.box_style_ulc{
+    position: absolute;
+    inset: 20% 50% 57.5% 0 !important;
     padding: 10px !important;
-    font-size: 20px !important;
-    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: left; 
 }
-.box_style_t20r75w50{
-    position: absolute !important;
-    top: 20% !important;
-    left: 75% !important;
-    width: 50% !important;
-    /* height: auto !important; */
+/* Upper right corner */
+.box_style_urc{
+    position: absolute;
+    inset: 20% 0% 57.5% 50% !important;
     padding: 10px !important;
-    font-size: 20px !important;
-    transform: translateX(-50%);
+    font-size: 20px;
+    text-align: left; 
 }
-.box_style_t20r75h75w50{
-    position: absolute !important;
-    top: 20% !important;
-    left: 75% !important;
-    height: 80% !important;
-    width: 50% !important;
+/* Lower left corner */
+.box_style_llc{
+    position: absolute;
+    inset: 57.5% 50% 5% 0 !important;
     padding: 10px !important;
-    font-size: 20px !important;
-    transform: translateX(-50%);
+    font-size: 20px;
+    text-align: left;
 }
-
-/* Right 3/4 part; Half height boxes; Center align */
-.box_style_t25r75h50c{
-    position: absolute !important;
-    top: 20% !important;
-    left: 75% !important;
-    height: 50% !important;
-    width: 50% !important;
-    /* padding: 10px !important; */
-    font-size: 20px !important;
-    transform: translate(-50%, -50%);
-}
-.box_style_t25r75w50c{
-    position: absolute !important;
-    top: 20% !important;
-    left: 75% !important;
-    width: 50% !important;
-    /* padding: 10px !important; */
-    font-size: 20px !important;
-    transform: translate(-50%, -50%);
-}
-
-.box_style_t75r75h50c{
-    position: absolute !important;
-    top: 70% !important;
-    left: 75% !important;
-    height: 50% !important;
-    width: 50% !important;
-    /* padding: 10px !important; */
-    font-size: 20px !important;
-    transform: translate(-50%, -50%);
+/* Lower right corner */
+.box_style_lrc{
+    position: absolute;
+    inset: 57.5% 0 5% 50% !important;
+    padding: 10px !important;
+    font-size: 20px;
+    text-align: left;
 }
 
 
@@ -502,6 +370,30 @@ ul li{
 }
 .onhover_show:hover{
     color: black !important;
-    
 }
+
+.slideplay_notification{
+    position: absolute !important;
+    /* width: 300px !important; */
+    text-align: center !important;
+    height: auto;
+    right: 5%;
+    bottom: 10px;
+    font-size: 25px !important;
+    padding: 10px !important;
+    z-index: 10 !important;
+    animation: moveRightAndBack 2.5s infinite;
+}
+@keyframes moveRightAndBack {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(10%);
+    }
+    50% {
+        transform: translateX(10%);
+    }
+}
+
 
