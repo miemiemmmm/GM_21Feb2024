@@ -1,9 +1,6 @@
 import * as THREE from  "https://cdn.jsdelivr.net/npm/three@0.127.0/build/three.module.js"
 import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.127.0/examples/jsm/controls/OrbitControls.js"
 import { PLYLoader } from "https://cdn.jsdelivr.net/npm/three@0.127.0/examples/jsm/loaders/PLYLoader.js"
-// console.log(THREE)
-// console.log(OrbitControls)
-// console.log(PLYLoader)
 
 $.getScript("https://cdn.plot.ly/plotly-2.25.2.min.js")
 $.getScript("https://3Dmol.org/build/3Dmol-min.js")
@@ -165,22 +162,6 @@ async function getAllImages(FIGURES) {
   // } catch (error) {
   //   console.error("An error occurred:", error);
   // }
-}
-
-function getFileName(element){
-  // ??????????????????????????????? Is this necessary? //
-  /////////////////////////////////////////////////
-  // Shortcut function to resolve the file name of an element
-  // The <src> attribute of the image element should be the name of the desired image file
-  /////////////////////////////////////////////////
-  if (typeof element === 'string' || element instanceof String){
-    let elem = document.getElementById(element);
-    // let src_str = elem.src.split("?")[0];
-    return elem.src.split("/")[elem.src.split("/").length-1]
-  } else if (element instanceof HTMLElement){
-    let elem = element;
-    return elem.src.split("/")[elem.src.split("/").length-1]
-  }
 }
 
 function update_page_number(event, pageNumberID){
